@@ -32,6 +32,10 @@ namespace Data.Configurations
            
             builder.Property(p => p.Number)
                    .HasColumnName("Number");
+            builder.Property(p => p.Name)
+                   .HasColumnName("Name");
+            builder.Property(p => p.Owned)
+                   .HasColumnName("Owned");
             builder.HasOne(x => x.Series);
             
         }
