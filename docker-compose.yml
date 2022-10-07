@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  database:
+    image: postgres:12
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "p"      
+      POSTGRES_DB: "comicsdb"
+      COMICS_ORGANIZER_DB_CONNECTION: "host=localhost;database=comicsdb;password=p;username=postgres;enlist=true;"
+ 
+  

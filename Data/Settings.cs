@@ -1,7 +1,10 @@
-﻿namespace ComicsOrganizer.Web
+﻿namespace Data
+
 {
-    public class Settings
+    public static class Settings
     {
+        public static string DbConnectionString => Get("COMICS_ORGANIZER_DB_CONNECTION");
+
         public static string Get(string key)
         {
             var setting = Environment.GetEnvironmentVariable(key);

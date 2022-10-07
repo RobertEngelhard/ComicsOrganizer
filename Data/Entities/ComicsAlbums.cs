@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Data.Entities
 {
-    public class ComicsSeries
-  
+    public class ComicsAlbums
     {
-  
         public int Id { get; set; }
-        public string Name { get; set; }
-        public List<ComicsAlbums> Albums { get; set; }
+        public string Number { get; set; }
+        public ComicsSeries Series { get; set; }
     }
 }

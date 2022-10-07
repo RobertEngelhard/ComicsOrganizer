@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using Data;
+using Npgsql;
 
 
 
@@ -17,6 +18,6 @@ namespace ComicsOrganizer.Web
 
 
 
-        public NpgsqlConnection GetConnection() => new NpgsqlConnection(Settings.Get("MANAGER_DB_CONNECTION"));
+        public NpgsqlConnection GetConnection() => new NpgsqlConnection(Settings.Get("COMICS_ORGANIZER_DB_CONNECTION"));
     }
 }

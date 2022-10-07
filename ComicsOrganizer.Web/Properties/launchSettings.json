@@ -13,7 +13,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "COMICS_ORGANIZER_DB_CONNECTION": "host=localhost;database=comicsdb;password=p;username=postgres;enlist=true;"
       }
     },
     "Docker": {
