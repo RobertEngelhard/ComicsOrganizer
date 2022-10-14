@@ -6,3 +6,35 @@
     <h1 class="display-4">Welcome comics lover</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+    <div id="form">
+            <fieldset>
+            <legend>Add Series</legend>
+            <div>
+                <label for="Name">Name:</label>
+                <input type="text" name="Name" value="" />
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input id="submit" type="submit" value="Submit" class="submit" />
+            </div>
+        </fieldset>
+    </div>
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#submit').on('click', function (evt) {
+
+                console.log("is it here?");
+
+                var request = $.ajax({ method: "POST", url: "https://localhost:44340/ComicsSeries", data: { name: "John" },contentType:"application/json",dataType:"json" }).done(function (msg) { alert("Data Saved: " + msg); });
+
+                request.fail(function (jqXHR, textStatus) { alert("Request failed: " + textStatus); })
+
+
+
+            });
+        });
+    </script>
+}
